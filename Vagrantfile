@@ -21,7 +21,7 @@ Vagrant.configure("2") do |config|
     mongo1.vm.network "forwarded_port", guest: 22, host: 2224
     mongo1.vm.network "private_network", ip: "10.10.10.11"
     
-    mongo1.vm.provision "shell", inline: $script # Just install it
+    #mongo1.vm.provision "shell", inline: $script # Just install it
 
     # Increase memory for Parallels Desktop
     mongo1.vm.provider "parallels" do |p, o|
@@ -41,7 +41,7 @@ Vagrant.configure("2") do |config|
     mongo2.vm.network "forwarded_port", guest: 22, host: 2225
     mongo2.vm.network "private_network", ip: "10.10.10.12"
     
-    mongo2.vm.provision "docker" # Just install it
+    #mongo2.vm.provision "docker" # Just install it
 
     # Increase memory for Parallels Desktop
     mongo2.vm.provider "parallels" do |p, o|
@@ -61,7 +61,7 @@ Vagrant.configure("2") do |config|
     mongo3.vm.network "forwarded_port", guest: 22, host: 2226
     mongo3.vm.network "private_network", ip: "10.10.10.13"
     
-    mongo3.vm.provision "docker" # Just install it
+    #mongo3.vm.provision "docker" # Just install it
 
     # Increase memory for Parallels Desktop
     mongo3.vm.provider "parallels" do |p, o|
